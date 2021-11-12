@@ -18,7 +18,10 @@ Tại đây bạn có thể thay đổi thư mục cài đặt của XAMPP tùy 
 - Truy cập thư mục htdocs, xóa tất cả mọi thứ để cho thư mục này hoàn toàn trống. (Tiện cho việc sử dụng sau này)
 
 ![image](https://user-images.githubusercontent.com/87531241/141422329-9ab43d6e-a92d-4819-824a-9f490f02bcc9.png)
-- Tại thanh đường dẫn thư mục gõ: cmd ![image](https://user-images.githubusercontent.com/87531241/141424875-3fbb3074-4475-4f7c-88fc-ae24f310888f.png)
+- Tại thanh đường dẫn thư mục gõ: cmd 
+
+
+![image](https://user-images.githubusercontent.com/87531241/141424875-3fbb3074-4475-4f7c-88fc-ae24f310888f.png)
 
 - Cửa sổ cmd xuất hiện, gõ: <pre> composer create-project --prefer-dist laravel/laravel ten-project "5.8.*" </pre>
   + <b> composer </b>: yêu cầu ứng dụng composer thực hiện
