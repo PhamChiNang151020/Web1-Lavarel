@@ -1,8 +1,11 @@
 # Hướng dẫn cài đặt môi trường
 #### Tải XAMPP:<pre> https://www.apachefriends.org/download.html </pre>
+Tại đây bạn có thể thay đổi thư mục cài đặt của XAMPP tùy theo mục đích sử dụng của bạn
 #### Tải Composer: <pre> https://getcomposer.org/download/ </pre>
 - Quá trình không mất tới vài phút. Bạn có thể bỏ qua developer mode trong quá trình và nhấn nút <i>Next</i>
-- Một cửa sổ hiện lên và hỏi vị trí PHP command line. Mặc định nó là trong C:/xampp/php/php.exe. Sau khi xác định vị trí, nhấn nút <i>Next</i>.
+- Một cửa sổ hiện lên và hỏi vị trí PHP command line. 
+  + Nếu bạn cài đặt XAMPP mặc đinh thì nó sẽ là trong C:/xampp/php/php.exe. Sau khi xác định vị trí, nhấn nút <i>Next</i>.
+  + Nếu bạn cài đặt XAMPP theo thư mục của bạn. Bạn cần đi đến thư mục cài đặt của XAMPP. Sau đó tìm thư mục <i>php</i> và tìm file "php.exe"
 - Bạn sẽ được hỏi <i>Proxy Settings</i>. Để ô này mặc định không check và nhấn <i>Next</i>. Rồi nhấn <i>Install</i>.
 - Sau khi hoàn tất cài đặt, mở command prompt và gõ: <pre>composer</pre>
 #### Tạo Project
