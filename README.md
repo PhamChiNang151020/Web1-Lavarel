@@ -21,3 +21,5 @@
 - Cửa sổ cmd xuất hiện và gõ: <pre>php artisan serve</pre>
 - Sau đó sẽ xuất hiện ![image](https://user-images.githubusercontent.com/87531241/141393342-a5498853-e9df-4c2e-bafc-3a269fff2e00.png)
 - Copy đường dẫn và dán vào trình duyệt web.
+![image](https://user-images.githubusercontent.com/87531241/141393481-66da876d-ed87-4c71-a85f-a3a7a2bc8edd.png)
+
