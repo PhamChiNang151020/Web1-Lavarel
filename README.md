@@ -36,13 +36,19 @@ Tại đây bạn có thể thay đổi thư mục cài đặt của XAMPP tùy 
 - Enter và được kết quả sau:
 
 ![image](https://user-images.githubusercontent.com/87531241/141423420-c63a296d-7ea7-44b6-8e33-550d4109116d.png)
+- Mở powershell trên thư mục bằng cách sử dụng "SHIFT" + "Right-Click" 
+- Nhập lệnh: <pre> php artisan serve </pre>
 
-- Sau đó truy cập vào trình duyệt của bạn và gõ: <pre>localhost</pre>
+![image](https://user-images.githubusercontent.com/87531241/142377365-c6a63f09-2459-4ba9-980e-73c0e737c276.png)
 
-![image](https://user-images.githubusercontent.com/87531241/141423834-e5d0afc5-aa0e-4505-98de-a6ba07ee26ed.png)
+- Sau đó copy đường dẫn và dán vào trình duyệt
+
+![image](https://user-images.githubusercontent.com/87531241/142377493-6e881abb-4da8-46bf-8345-cf3d59317372.png)
+
+
 - Hình trên là các project mình đã tạo
-- Tiếp tục truy cập "project_dau_tien/public/"
 
-![image](https://user-images.githubusercontent.com/87531241/141424003-39ef88ef-59c4-4e75-949b-da44a2707d2d.png)
+![image](https://user-images.githubusercontent.com/87531241/142377718-2a788d17-0615-4e4b-9e27-237b33844d49.png)
+
 
 - Nếu được kết quả như hình trên thì bạn đã tạo thành công một project với <b>famework lavarel</b>
