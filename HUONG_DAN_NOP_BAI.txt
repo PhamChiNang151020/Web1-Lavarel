@@ -1,30 +1,40 @@
-// Cach bien dich (g++):
-// g++ -o bai1 B4_Cay/Bai1_BST.cpp
-// Chay: ./bai1
+// Nop bai theo CHUONG (C++)
+// Ho ten: Nguyen Bui Duy Tung
 //
-// B4_Cay:
-//   Bai1_BST.cpp          - Cay NPTK + menu bai 1b
-//   Bai2_MoRong.cpp       - Thao tac mo rong
-//   BT1_DSLK_Don.cpp      - DSLK don
-//   BT2_DSLK_Kep.cpp      - DSLK kep
-//   BT3_BST.cpp           - Doc Input.txt, duyet khong de quy
-//   BT4_PhanSo_DaThuc.cpp - Phan so + da thuc (DSLK don)
-//   BT5_DSLK_Kep.cpp      - Phan so + da thuc (DSLK kep)
-//   Input.txt             - File du lieu cho BT3
+// Bien dich vi du:
+//   g++ -o bai1 Chuong3/Bai1_Queue_TinhTien.cpp
+//   ./bai1
 //
-// B5_Queue:
-//   Bai1_Queue_TinhTien.cpp
-//   Bai2_Queue_Vong.cpp
-//   Bai3_Queue_DSLK.cpp
-//   BT3_Stack_Mang.cpp
-//   BT3_Stack_DSLK.cpp
+// ============================================================
+// Chuong3/          <- Stack + Queue
+// ============================================================
+//   Bai1_Queue_TinhTien.cpp   Queue mang, tinh tien
+//   Bai2_Queue_Vong.cpp       Queue mang, vong
+//   Bai3_Queue_DSLK.cpp       Queue DSLK
+//   BT3_Stack_Mang.cpp        Stack so nguyen (mang)
+//   BT3_Stack_DSLK.cpp        Stack so nguyen (DSLK)
 //
-// B5_SapXep:
-//   Bai4_SapXep.cpp
-//   Bai5_SapXep.cpp
+// ============================================================
+// Chuong4/          <- Cay NPTK + bai on tap
+// ============================================================
+//   Bai1_BST.cpp              Cay NPTK + menu Chuong 4
+//   Bai2_MoRong.cpp           Thao tac mo rong
+//   Bai_BST.cpp               Them/tim/xoa BST (3 truong hop)
+//   BT1_DSLK_Don.cpp          On tap DSLK don
+//   BT2_DSLK_Kep.cpp          On tap DSLK kep
+//   BT3_BST.cpp               BST doc Input.txt, duyet khong de quy
+//   Input.txt                 Du lieu cho BT3
+//   BT4_PhanSo_DaThuc.cpp     Phan so + da thuc (DSLK don)
+//   BT5_DSLK_Kep.cpp          Phan so + da thuc (DSLK kep)
 //
-// B5_DoThi:
-//   Bai_BST.cpp
-//   Bai6_DoThi.cpp
-//   Bai7_BFS.cpp
-//   Bai8_DFS.cpp
+//   BT3 chay trong thu muc Chuong4 de doc duoc Input.txt:
+//     cd Chuong4 && g++ -o bt3 BT3_BST.cpp && ./bt3
+//
+// ============================================================
+// Chuong5/          <- Sap xep + Do thi
+// ============================================================
+//   Bai4_SapXep.cpp           Insertion, Selection
+//   Bai5_SapXep.cpp           Bubble, Interchange, Quick, Heap, Merge
+//   Bai6_DoThi.cpp            Ma tran ke + danh sach ke
+//   Bai7_BFS.cpp              BFS (DSLK ke, Queue/Stack DSLK)
+//   Bai8_DFS.cpp              DFS (ma tran ke, Queue/Stack mang)
