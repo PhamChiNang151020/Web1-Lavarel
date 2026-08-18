@@ -22,5 +22,7 @@
 //   Bai6_DoThi.cpp
 //   Bai7_BFS.cpp
 //   Bai8_DFS.cpp
+//   BT3_Stack_Mang.cpp    - Stack so nguyen (mang)
+//   BT3_Stack_DSLK.cpp    - Stack so nguyen (DSLK)
 //
 // Tat ca bien khai bao dang: ten_1_Tung
