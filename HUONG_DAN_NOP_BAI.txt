@@ -1,5 +1,5 @@
 // Cach bien dich (g++):
-// g++ -o bai1 Bai1_BST.cpp
+// g++ -o bai1 B4_Cay/Bai1_BST.cpp
 // Chay: ./bai1
 //
 // B4_Cay:
@@ -12,17 +12,19 @@
 //   BT5_DSLK_Kep.cpp      - Phan so + da thuc (DSLK kep)
 //   Input.txt             - File du lieu cho BT3
 //
-// B5_Queue_SX_DoThi:
+// B5_Queue:
 //   Bai1_Queue_TinhTien.cpp
 //   Bai2_Queue_Vong.cpp
 //   Bai3_Queue_DSLK.cpp
+//   BT3_Stack_Mang.cpp
+//   BT3_Stack_DSLK.cpp
+//
+// B5_SapXep:
 //   Bai4_SapXep.cpp
 //   Bai5_SapXep.cpp
+//
+// B5_DoThi:
 //   Bai_BST.cpp
 //   Bai6_DoThi.cpp
 //   Bai7_BFS.cpp
 //   Bai8_DFS.cpp
-//   BT3_Stack_Mang.cpp    - Stack so nguyen (mang)
-//   BT3_Stack_DSLK.cpp    - Stack so nguyen (DSLK)
-//
-// Tat ca bien khai bao dang: ten_1_Tung
