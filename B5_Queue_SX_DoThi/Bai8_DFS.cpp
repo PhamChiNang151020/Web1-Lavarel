@@ -1,6 +1,5 @@
-// Ho ten: Tung
+// Ho ten: Nguyen Bui Duy Tung
 // B5 - Bai 8: DFS (ma tran ke + Queue/Stack danh sach dac)
-// Bien khai bao theo dang x_1_Tung
 
 #include <iostream>
 using namespace std;

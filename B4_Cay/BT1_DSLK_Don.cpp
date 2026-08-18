@@ -1,6 +1,5 @@
-// Ho ten: Tung
+// Ho ten: Nguyen Bui Duy Tung
 // BT1: Quan ly phan tu bang DSLK don (so nguyen duong)
-// Bien khai bao theo dang x_1_Tung
 
 #include <iostream>
 using namespace std;

@@ -1,6 +1,5 @@
-// Ho ten: Tung
+// Ho ten: Nguyen Bui Duy Tung
 // B5 - Bai 6: Bieu dien do thi - ma tran ke + danh sach ke
-// Bien khai bao theo dang x_1_Tung
 
 #include <iostream>
 using namespace std;

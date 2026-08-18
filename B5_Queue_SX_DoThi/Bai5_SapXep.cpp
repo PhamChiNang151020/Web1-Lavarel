@@ -1,6 +1,5 @@
-// Ho ten: Tung
+// Ho ten: Nguyen Bui Duy Tung
 // B5 - Bai 5: Bubble, Interchange, Quick, Heap, Merge
-// Bien khai bao theo dang x_1_Tung
 
 #include <iostream>
 using namespace std;

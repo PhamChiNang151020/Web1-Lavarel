@@ -1,6 +1,5 @@
-// Ho ten: Tung
+// Ho ten: Nguyen Bui Duy Tung
 // B5: Cay NPTK - them, tim, xoa (3 TH), duyet NLR/LNR/LRN (de quy)
-// Bien khai bao theo dang x_1_Tung
 
 #include <iostream>
 using namespace std;

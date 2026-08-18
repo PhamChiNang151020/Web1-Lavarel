@@ -1,6 +1,5 @@
-// Ho ten: Tung
+// Ho ten: Nguyen Bui Duy Tung
 // B5 - Bai 4: Sap xep Insertion + Selection (va in ket qua nhu mau)
-// Bien khai bao theo dang x_1_Tung
 
 #include <iostream>
 using namespace std;

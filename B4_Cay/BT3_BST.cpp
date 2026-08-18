@@ -1,6 +1,5 @@
-// Ho ten: Tung
+// Ho ten: Nguyen Bui Duy Tung
 // BT3: Cay NPTK - doc file Input.txt, duyet khong de quy
-// Bien khai bao theo dang x_1_Tung
 
 #include <iostream>
 #include <fstream>

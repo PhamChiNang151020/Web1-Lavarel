@@ -1,7 +1,6 @@
 // MSSV: 
-// Ho ten: Tung
+// Ho ten: Nguyen Bui Duy Tung
 // Bai 1 + Bai 1b: Cay nhi phan tim kiem (NPTK)
-// Bien khai bao theo dang x_1_Tung
 
 #include <iostream>
 using namespace std;
