@@ -1,5 +1,7 @@
 // Ho ten: Nguyen Bui Duy Tung
-// BT4: DSLK don - Phan so + Da thuc
+// Chuong 4 - BT4: DSLK don - Phan so + Da thuc
+// Phan so: rut gon bang UCLN, tong = a/b + c/d.
+// Da thuc: moi nut la 1 don thuc (he so, so mu).
 
 #include <iostream>
 using namespace std;

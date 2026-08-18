@@ -1,5 +1,7 @@
 // Ho ten: Nguyen Bui Duy Tung
-// B5: Cay NPTK - them, tim, xoa (3 TH), duyet NLR/LNR/LRN (de quy)
+// Chuong 4 - Cay NPTK (tt): them, tim, xoa 3 TH, duyet de quy
+//
+// Xoa nut: la / bac 1 / bac 2 (the bang cuc trai cua cay con phai).
 
 #include <iostream>
 using namespace std;
@@ -66,13 +68,13 @@ void Xoa_1_Tung(Node_1_Tung*& p_1_Tung, int x_1_Tung)
 		Xoa_1_Tung(p_1_Tung->right_1_Tung, x_1_Tung);
 	else
 	{
-		// TH1: nut la
+		// TH1: nut la -> gan NULL
 		if (p_1_Tung->left_1_Tung == NULL && p_1_Tung->right_1_Tung == NULL)
 		{
 			delete p_1_Tung;
 			p_1_Tung = NULL;
 		}
-		// TH2: nut bac 1
+		// TH2: nut bac 1 -> noi cha voi con con lai
 		else if (p_1_Tung->left_1_Tung == NULL)
 		{
 			Node_1_Tung* t_1_Tung = p_1_Tung;
@@ -90,7 +92,7 @@ void Xoa_1_Tung(Node_1_Tung*& p_1_Tung, int x_1_Tung)
 		{
 			Node_1_Tung* t_1_Tung = p_1_Tung->right_1_Tung;
 			while (t_1_Tung->left_1_Tung != NULL)
-				t_1_Tung = t_1_Tung->left_1_Tung;
+				t_1_Tung = t_1_Tung->left_1_Tung; // di het nhanh trai
 			p_1_Tung->info_1_Tung = t_1_Tung->info_1_Tung;
 			Xoa_1_Tung(p_1_Tung->right_1_Tung, t_1_Tung->info_1_Tung);
 		}

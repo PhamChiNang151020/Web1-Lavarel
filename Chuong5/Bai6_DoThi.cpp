@@ -1,5 +1,7 @@
 // Ho ten: Nguyen Bui Duy Tung
-// B5 - Bai 6: Bieu dien do thi - ma tran ke + danh sach ke
+// Chuong 5 - Bai 6: Bieu dien do thi - ma tran ke + danh sach ke
+// Ma tran ke A[i][j] = 1 neu co canh i-j.
+// Danh sach ke: first[i] la DSLK cac dinh ke (insert_first theo slide).
 
 #include <iostream>
 using namespace std;

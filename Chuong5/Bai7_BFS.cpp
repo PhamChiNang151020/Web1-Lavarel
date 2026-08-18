@@ -1,5 +1,7 @@
 // Ho ten: Nguyen Bui Duy Tung
-// B5 - Bai 7: BFS (danh sach ke + Queue/Stack DSLK)
+// Chuong 5 - Bai 7: BFS (danh sach ke + Queue/Stack DSLK)
+// BFS dung Queue DSLK, DFS dung Stack DSLK.
+// Tim dinh X: duyet BFS, neu gap X thi ton tai.
 
 #include <iostream>
 using namespace std;
@@ -14,7 +16,7 @@ struct node_1_Tung
 
 node_1_Tung* first_1_Tung[max_1_Tung];
 int n_1_Tung;
-int chuaxet_1_Tung[max_1_Tung];
+int chuaxet_1_Tung[max_1_Tung]; // 1 = chua xet, 0 = da xet
 
 void init_1_Tung()
 {
@@ -201,6 +203,7 @@ int Spop_1_Tung(int& x_1_Tung)
 	return 1;
 }
 
+// BFS: hang doi, danh dau chuaxet=0 khi dua vao queue (tranh visit 2 lan)
 void BFS_1_Tung(int start_1_Tung)
 {
 	int vt_1_Tung = timViTri_1_Tung(start_1_Tung);
@@ -243,6 +246,7 @@ void BFS_1_Tung(int start_1_Tung)
 	cout << endl;
 }
 
+// DFS: dung stack DSLK thay vi queue
 void DFS_1_Tung(int start_1_Tung)
 {
 	int vt_1_Tung = timViTri_1_Tung(start_1_Tung);
@@ -285,6 +289,7 @@ void DFS_1_Tung(int start_1_Tung)
 	cout << endl;
 }
 
+// Kiem tra dinh X co tren do thi khong (dua tren BFS)
 int timBFS_1_Tung(int x_1_Tung)
 {
 	if (n_1_Tung == 0)

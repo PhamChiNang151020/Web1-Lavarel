@@ -1,5 +1,9 @@
 // Ho ten: Nguyen Bui Duy Tung
-// B5 - Bai 3: Queue dung DSLK
+// Chuong 3 - Bai 3: Queue dung DSLK
+//
+// Queue FIFO cai bang danh sach lien ket don.
+// front: nut dau (lay ra), rear: nut cuoi (them vao).
+// Khong bi day vi cap phat dong; ket thuc phai xoa het de tranh ro ri bo nho.
 
 #include <iostream>
 using namespace std;
@@ -7,12 +11,12 @@ using namespace std;
 // 1. khai bao cau truc queue
 struct Node_1_Tung
 {
-	int info_1_Tung;
-	Node_1_Tung* link_1_Tung;
+	int info_1_Tung;           // du lieu
+	Node_1_Tung* link_1_Tung;  // tro toi nut ke tiep
 };
 
-Node_1_Tung* front_1_Tung;
-Node_1_Tung* rear_1_Tung;
+Node_1_Tung* front_1_Tung; // dau hang (dequeue)
+Node_1_Tung* rear_1_Tung;  // cuoi hang (enqueue)
 
 // 2. Thu tuc khoi tao queue rong
 void init_1_Tung()
@@ -29,7 +33,7 @@ int isEmpty_1_Tung()
 	return 0;
 }
 
-// 4. Viet thu tuc them 1 ptu vao queue
+// 4. Viet thu tuc them 1 ptu vao queue (them vao rear)
 void Push_1_Tung(int x_1_Tung)
 {
 	Node_1_Tung* p_1_Tung = new Node_1_Tung;
@@ -37,26 +41,27 @@ void Push_1_Tung(int x_1_Tung)
 	p_1_Tung->link_1_Tung = NULL;
 	if (rear_1_Tung == NULL)
 	{
+		// hang rong: p vua la front vua la rear
 		front_1_Tung = p_1_Tung;
 		rear_1_Tung = p_1_Tung;
 	}
 	else
 	{
-		rear_1_Tung->link_1_Tung = p_1_Tung;
+		rear_1_Tung->link_1_Tung = p_1_Tung; // noi vao sau nut cuoi
 		rear_1_Tung = p_1_Tung;
 	}
 }
 
-// 5. Viet thu tuc xoa 1 ptu trong queue
+// 5. Viet thu tuc xoa 1 ptu trong queue (lay o front)
 int Pop_1_Tung(int& x_1_Tung)
 {
 	if (front_1_Tung != NULL)
 	{
 		Node_1_Tung* p_1_Tung = front_1_Tung;
 		x_1_Tung = p_1_Tung->info_1_Tung;
-		front_1_Tung = front_1_Tung->link_1_Tung;
+		front_1_Tung = front_1_Tung->link_1_Tung; // front nhay sang nut sau
 		if (front_1_Tung == NULL)
-			rear_1_Tung = NULL;
+			rear_1_Tung = NULL; // vua xoa ptu cuoi cung
 		delete p_1_Tung;
 		return 1;
 	}
@@ -68,7 +73,7 @@ void xoaHet_1_Tung()
 {
 	int x_1_Tung;
 	while (Pop_1_Tung(x_1_Tung) == 1)
-		;
+		; // pop lien tuc den khi rong
 }
 
 void xuat_1_Tung()
@@ -108,7 +113,7 @@ int main()
 		switch (chon_1_Tung)
 		{
 		case 1:
-			xoaHet_1_Tung();
+			xoaHet_1_Tung(); // giai phong nut cu truoc khi init
 			init_1_Tung();
 			cout << "Da khoi tao hang doi rong!" << endl;
 			break;
@@ -138,7 +143,7 @@ int main()
 			xuat_1_Tung();
 			break;
 		case 7:
-			xoaHet_1_Tung();
+			xoaHet_1_Tung(); // xoa het khi ket thuc chuong trinh
 			cout << "Thoat!" << endl;
 			break;
 		default:

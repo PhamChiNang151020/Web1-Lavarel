@@ -1,5 +1,5 @@
 // Ho ten: Nguyen Bui Duy Tung
-// BT5: DSLK kep - Phan so + Da thuc (giong BT4)
+// Chuong 4 - BT5: DSLK kep - Phan so + Da thuc (giong BT4, dung next/prev)
 
 #include <iostream>
 using namespace std;

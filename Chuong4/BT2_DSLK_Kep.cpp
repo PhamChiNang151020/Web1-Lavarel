@@ -1,5 +1,6 @@
 // Ho ten: Nguyen Bui Duy Tung
-// BT2: Quan ly phan tu bang DSLK kep (so nguyen duong)
+// Chuong 4 - BT2: Quan ly phan tu bang DSLK kep (so nguyen duong)
+// Nut co next + prev. Noi 2 list: last1->next = first2.
 
 #include <iostream>
 using namespace std;

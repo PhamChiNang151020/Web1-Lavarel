@@ -1,18 +1,21 @@
 // Ho ten: Nguyen Bui Duy Tung
-// B5 - Bai 1: Queue mang - phuong phap TINH TIEN
+// Chuong 3 - Bai 1: Queue mang - phuong phap TINH TIEN
+//
+// Queue (FIFO): them o rear, lay o front.
+// Dung mang 100 ptu. Khi rear den cuoi mang nhung van con cho o dau
+// (front > 0) thi "tinh tien" (doi ptu ve index 0) de khong bi tran gia.
 
 #include <iostream>
 using namespace std;
 
-#define MAX_1_Tung 100
+#define MAX_1_Tung 100 // suc chua toi da cua hang doi
 
+// 1. Khai bao cau truc queue: mang a, front (dau), rear (cuoi)
 int a_1_Tung[MAX_1_Tung];
 int front_1_Tung;
 int rear_1_Tung;
 
-// 1. Khai bao cau truc queue: mang a, front, rear
-
-// 2. Khoi tao queue rong
+// 2. Khoi tao queue rong: -1 nghia la chua nam trong mang
 void init_1_Tung(int a_1_Tung[], int& front_1_Tung, int& rear_1_Tung)
 {
 	front_1_Tung = -1; // ngoai kha nang luu tru cua mang
@@ -27,7 +30,7 @@ int isEmpty_1_Tung(int front_1_Tung)
 	return 0;
 }
 
-// 4. Kiem tra queue day
+// 4. Kiem tra queue day that (so ptu = MAX)
 int isFull_1_Tung(int front_1_Tung, int rear_1_Tung)
 {
 	if (rear_1_Tung - front_1_Tung == MAX_1_Tung - 1)
@@ -35,28 +38,30 @@ int isFull_1_Tung(int front_1_Tung, int rear_1_Tung)
 	return 0;
 }
 
-// 5. Them 1 ptu vao queue (tinh tien neu can)
+// 5. Them 1 ptu vao queue (enqueue)
+// Neu rear o cuoi mang ma hang chua day -> tinh tien roi moi them
 int Push_1_Tung(int a_1_Tung[], int& front_1_Tung, int& rear_1_Tung, int x_1_Tung)
 {
 	if (rear_1_Tung - front_1_Tung == MAX_1_Tung - 1) // day that
-		return 0;
+		return 0; // them khong thanh cong
 	else
 	{
-		if (front_1_Tung == -1) // hang doi rong
+		if (front_1_Tung == -1) // hang doi rong, ptu dau tien nam o vi tri 0
 			front_1_Tung = 0;
 		if (rear_1_Tung == MAX_1_Tung - 1) // bi tran gia -> tinh tien
 		{
+			// doi doan [front..rear] ve dau mang
 			for (int i_1_Tung = front_1_Tung; i_1_Tung <= rear_1_Tung; i_1_Tung++)
 				a_1_Tung[i_1_Tung - front_1_Tung] = a_1_Tung[i_1_Tung];
-			rear_1_Tung = MAX_1_Tung - 1 - front_1_Tung;
+			rear_1_Tung = MAX_1_Tung - 1 - front_1_Tung; // rear moi sau khi don
 			front_1_Tung = 0;
 		}
-		a_1_Tung[++rear_1_Tung] = x_1_Tung;
-		return 1;
+		a_1_Tung[++rear_1_Tung] = x_1_Tung; // tang rear roi gan x
+		return 1; // them thanh cong
 	}
 }
 
-// 6. Xoa 1 ptu trong queue
+// 6. Xoa 1 ptu trong queue (dequeue) - lay o front roi front++
 int Pop_1_Tung(int a_1_Tung[], int& front_1_Tung, int& rear_1_Tung, int& x_1_Tung)
 {
 	if (front_1_Tung == -1) // hang doi rong
@@ -74,6 +79,7 @@ int Pop_1_Tung(int a_1_Tung[], int& front_1_Tung, int& rear_1_Tung, int& x_1_Tun
 	}
 }
 
+// Xuat cac ptu tu front den rear
 void xuat_1_Tung(int a_1_Tung[], int front_1_Tung, int rear_1_Tung)
 {
 	if (front_1_Tung == -1)

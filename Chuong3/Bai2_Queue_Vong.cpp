@@ -1,5 +1,9 @@
 // Ho ten: Nguyen Bui Duy Tung
-// B5 - Bai 2: Queue mang - phuong phap VONG
+// Chuong 3 - Bai 2: Queue mang - phuong phap VONG
+//
+// Queue vong: khi rear (hoac front) den cuoi mang thi quay ve 0.
+// Khong can don phan tu nhu tinh tien, them/xoa van O(1).
+// Day khi: (rear - front == MAX-1) hoac (rear - front == -1) (theo slide).
 
 #include <iostream>
 using namespace std;
@@ -10,6 +14,7 @@ int a_1_Tung[MAX_1_Tung];
 int front_1_Tung;
 int rear_1_Tung;
 
+// Khoi tao hang doi rong
 void init_1_Tung(int a_1_Tung[], int& front_1_Tung, int& rear_1_Tung)
 {
 	front_1_Tung = -1; // ngoai kha nang luu tru cua mang
@@ -23,6 +28,7 @@ int isEmpty_1_Tung(int front_1_Tung)
 	return 0;
 }
 
+// Day: hang lap day ca mang, ke ca khi da quay vong
 int isFull_1_Tung(int front_1_Tung, int rear_1_Tung)
 {
 	if ((rear_1_Tung - front_1_Tung == MAX_1_Tung - 1) || (rear_1_Tung - front_1_Tung == -1))
@@ -30,21 +36,23 @@ int isFull_1_Tung(int front_1_Tung, int rear_1_Tung)
 	return 0;
 }
 
+// Them: neu rear o cuoi mang thi gan rear = -1, ++rear se ra 0 (quay vong)
 int Push_1_Tung(int a_1_Tung[], int& front_1_Tung, int& rear_1_Tung, int x_1_Tung)
 {
 	if ((rear_1_Tung - front_1_Tung == MAX_1_Tung - 1) || (rear_1_Tung - front_1_Tung == -1))
-		return 0;
+		return 0; // hang doi bi day, them khong thanh cong
 	else
 	{
-		if (front_1_Tung == -1)
-			front_1_Tung = 0;
-		if (rear_1_Tung == MAX_1_Tung - 1)
-			rear_1_Tung = -1;
-		a_1_Tung[++rear_1_Tung] = x_1_Tung;
-		return 1;
+		if (front_1_Tung == -1) // hang doi rong
+			front_1_Tung = 0; // nhan gia tri moi vo
+		if (rear_1_Tung == MAX_1_Tung - 1) // hang doi bi tran, nhung ko day
+			rear_1_Tung = -1; // quay ve -1 de tang len 1 se nam dau hang doi
+		a_1_Tung[++rear_1_Tung] = x_1_Tung; // tang rear 1 don vi gan x vao
+		return 1; // them thanh cong
 	}
 }
 
+// Lay 1 ptu: front++ , neu vuot MAX thi front = 0
 int Pop_1_Tung(int a_1_Tung[], int& front_1_Tung, int& rear_1_Tung, int& x_1_Tung)
 {
 	if (front_1_Tung != -1)
@@ -57,15 +65,16 @@ int Pop_1_Tung(int a_1_Tung[], int& front_1_Tung, int& rear_1_Tung, int& x_1_Tun
 		}
 		else
 		{
-			front_1_Tung++;
+			front_1_Tung++; // sau khi co cum len 1 don vi
 			if (front_1_Tung == MAX_1_Tung)
-				front_1_Tung = 0;
+				front_1_Tung = 0; // quay vong ve dau mang
 		}
-		return 1;
+		return 1; // Lay thanh cong
 	}
-	return 0;
+	return 0; // ko thanh cong
 }
 
+// Xuat theo chieu vong tu front den rear
 void xuat_1_Tung(int a_1_Tung[], int front_1_Tung, int rear_1_Tung)
 {
 	if (front_1_Tung == -1)
@@ -82,7 +91,7 @@ void xuat_1_Tung(int a_1_Tung[], int front_1_Tung, int rear_1_Tung)
 			break;
 		i_1_Tung++;
 		if (i_1_Tung == MAX_1_Tung)
-			i_1_Tung = 0;
+			i_1_Tung = 0; // quay vong
 	}
 	cout << endl;
 }

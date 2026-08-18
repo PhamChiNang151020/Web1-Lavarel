@@ -1,18 +1,21 @@
 // MSSV: 
 // Ho ten: Nguyen Bui Duy Tung
-// Bai 1 + Bai 1b: Cay nhi phan tim kiem (NPTK)
+// Chuong 4 - Bai 1 + Bai 1b: Cay nhi phan tim kiem (NPTK)
+//
+// BST: nut trai < nut hien tai < nut phai.
+// Moi nut cap phat dong, 2 con tro left/right. Nut la: 2 con = NULL.
 
 #include <iostream>
 using namespace std;
 
-#define COUNT_1_Tung 10
+#define COUNT_1_Tung 10 // khoang cach khi in cay xoay 90 do
 
 // 1. Khai bao cau truc cay
 struct Node_1_Tung
 {
-	int info_1_Tung;
-	Node_1_Tung* left_1_Tung;
-	Node_1_Tung* right_1_Tung;
+	int info_1_Tung;            // khoa (gia tri)
+	Node_1_Tung* left_1_Tung;   // cay con trai
+	Node_1_Tung* right_1_Tung;  // cay con phai
 };
 
 Node_1_Tung* root_1_Tung;
@@ -24,6 +27,7 @@ void init_1_Tung()
 }
 
 // 3. Them 1 nut vao cay (de quy)
+// x < p -> sang trai; x > p -> sang phai; gap NULL thi tao nut moi
 void Them_1_Tung(Node_1_Tung*& p_1_Tung, int x_1_Tung)
 {
 	if (p_1_Tung == NULL)
@@ -36,7 +40,7 @@ void Them_1_Tung(Node_1_Tung*& p_1_Tung, int x_1_Tung)
 	else
 	{
 		if (p_1_Tung->info_1_Tung == x_1_Tung)
-			return; // da co gia tri nay
+			return; // da co gia tri nay, khong them trung
 		else if (p_1_Tung->info_1_Tung > x_1_Tung)
 			Them_1_Tung(p_1_Tung->left_1_Tung, x_1_Tung);
 		else
@@ -59,7 +63,7 @@ Node_1_Tung* Tim_1_Tung(Node_1_Tung* p_1_Tung, int x_1_Tung)
 	return NULL;
 }
 
-// 5. Duyet cay LNR dung de quy
+// 5. Duyet cay LNR dung de quy (Left-Node-Right) -> in tang dan tren BST
 void duyetLNR_1_Tung(Node_1_Tung* p_1_Tung)
 {
 	if (p_1_Tung != NULL)
@@ -70,7 +74,7 @@ void duyetLNR_1_Tung(Node_1_Tung* p_1_Tung)
 	}
 }
 
-// 6. Duyet cay LRN dung de quy
+// 6. Duyet cay LRN dung de quy (Left-Right-Node) - hau tu
 void duyetLRN_1_Tung(Node_1_Tung* p_1_Tung)
 {
 	if (p_1_Tung != NULL)
@@ -81,7 +85,7 @@ void duyetLRN_1_Tung(Node_1_Tung* p_1_Tung)
 	}
 }
 
-// 7. Duyet cay NLR dung de quy
+// 7. Duyet cay NLR dung de quy (Node-Left-Right) - tien tu
 void duyetNLR_1_Tung(Node_1_Tung* p_1_Tung)
 {
 	if (p_1_Tung != NULL)
@@ -92,7 +96,7 @@ void duyetNLR_1_Tung(Node_1_Tung* p_1_Tung)
 	}
 }
 
-// 8. Tim khoa lon nhat
+// 8. Tim khoa lon nhat: di lien ve phai
 Node_1_Tung* TimMax_1_Tung(Node_1_Tung* p_1_Tung)
 {
 	if (p_1_Tung == NULL)
@@ -102,7 +106,7 @@ Node_1_Tung* TimMax_1_Tung(Node_1_Tung* p_1_Tung)
 	return p_1_Tung;
 }
 
-// 9. Tim khoa nho nhat
+// 9. Tim khoa nho nhat: di lien ve trai
 Node_1_Tung* TimMin_1_Tung(Node_1_Tung* p_1_Tung)
 {
 	if (p_1_Tung == NULL)
@@ -112,24 +116,24 @@ Node_1_Tung* TimMin_1_Tung(Node_1_Tung* p_1_Tung)
 	return p_1_Tung;
 }
 
-// 10. Xoa 1 nut trong cay (3 truong hop)
+// 10. Xoa 1 nut trong cay (3 truong hop - theo slide)
 void Xoa_1_Tung(Node_1_Tung*& p_1_Tung, int x_1_Tung)
 {
 	if (p_1_Tung == NULL)
-		return;
+		return; // khong tim thay
 	if (x_1_Tung < p_1_Tung->info_1_Tung)
 		Xoa_1_Tung(p_1_Tung->left_1_Tung, x_1_Tung);
 	else if (x_1_Tung > p_1_Tung->info_1_Tung)
 		Xoa_1_Tung(p_1_Tung->right_1_Tung, x_1_Tung);
 	else
 	{
-		// Truong hop 1: nut la
+		// Truong hop 1: nut la -> cha tro NULL
 		if (p_1_Tung->left_1_Tung == NULL && p_1_Tung->right_1_Tung == NULL)
 		{
 			delete p_1_Tung;
 			p_1_Tung = NULL;
 		}
-		// Truong hop 2: nut bac 1
+		// Truong hop 2: nut bac 1 -> cha tro thang sang con con lai
 		else if (p_1_Tung->left_1_Tung == NULL)
 		{
 			Node_1_Tung* t_1_Tung = p_1_Tung;
@@ -142,19 +146,20 @@ void Xoa_1_Tung(Node_1_Tung*& p_1_Tung, int x_1_Tung)
 			p_1_Tung = p_1_Tung->left_1_Tung;
 			delete t_1_Tung;
 		}
-		// Truong hop 3: nut bac 2 - the bang nut cuc trai cua nhanh phai
+		// Truong hop 3: nut bac 2
+		// The bang nut cuc trai cua nhanh con phai (in-order successor)
 		else
 		{
 			Node_1_Tung* t_1_Tung = p_1_Tung->right_1_Tung;
 			while (t_1_Tung->left_1_Tung != NULL)
 				t_1_Tung = t_1_Tung->left_1_Tung;
-			p_1_Tung->info_1_Tung = t_1_Tung->info_1_Tung;
-			Xoa_1_Tung(p_1_Tung->right_1_Tung, t_1_Tung->info_1_Tung);
+			p_1_Tung->info_1_Tung = t_1_Tung->info_1_Tung; // chep khoa the mang
+			Xoa_1_Tung(p_1_Tung->right_1_Tung, t_1_Tung->info_1_Tung); // xoa nut the mang
 		}
 	}
 }
 
-// Xuat cay (xoay 90 do)
+// Xuat cay xoay 90 do: in nhanh phai truoc, indent theo muc (nhin ngang)
 void print2DUtil_1_Tung(Node_1_Tung* p_1_Tung, int space_1_Tung)
 {
 	if (p_1_Tung == NULL)

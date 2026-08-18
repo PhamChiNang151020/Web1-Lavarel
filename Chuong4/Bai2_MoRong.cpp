@@ -1,5 +1,6 @@
 // Ho ten: Nguyen Bui Duy Tung
-// Bai 2: Cac thao tac mo rong tren cay NPTK
+// Chuong 4 - Bai 2: Cac thao tac mo rong tren cay NPTK
+// Dem nut, la, nut trong, chieu cao, muc k, tong, min/max...
 
 #include <iostream>
 using namespace std;
@@ -59,7 +60,7 @@ void xuatCay_1_Tung()
 	cout << endl;
 }
 
-// 1. Dem so nut tren cay
+// 1. Dem so nut tren cay (de quy: 1 + trai + phai)
 int demNut_1_Tung(Node_1_Tung* p_1_Tung)
 {
 	if (p_1_Tung == NULL)
@@ -67,7 +68,7 @@ int demNut_1_Tung(Node_1_Tung* p_1_Tung)
 	return 1 + demNut_1_Tung(p_1_Tung->left_1_Tung) + demNut_1_Tung(p_1_Tung->right_1_Tung);
 }
 
-// 2. Dem so nut la
+// 2. Dem so nut la (2 con deu NULL)
 int demLa_1_Tung(Node_1_Tung* p_1_Tung)
 {
 	if (p_1_Tung == NULL)
@@ -98,7 +99,7 @@ int demNutTrong_1_Tung(Node_1_Tung* p_1_Tung)
 	return d_1_Tung + demNutTrong_1_Tung(p_1_Tung->left_1_Tung) + demNutTrong_1_Tung(p_1_Tung->right_1_Tung);
 }
 
-// 4. Chieu cao cua cay
+// 4. Chieu cao: max(trai, phai) + 1 ; cay rong = 0
 int chieuCao_1_Tung(Node_1_Tung* p_1_Tung)
 {
 	if (p_1_Tung == NULL)

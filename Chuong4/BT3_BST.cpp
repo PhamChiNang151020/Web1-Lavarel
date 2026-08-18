@@ -1,5 +1,6 @@
 // Ho ten: Nguyen Bui Duy Tung
-// BT3: Cay NPTK - doc file Input.txt, duyet khong de quy
+// Chuong 4 - BT3: Cay NPTK - doc file Input.txt, duyet KHONG de quy
+// Dong 1 file: so ptu; dong 2: day so. Duyet dung stack mang.
 
 #include <iostream>
 #include <fstream>
@@ -62,7 +63,8 @@ void docFile_1_Tung()
 	cout << "Da them " << n_1_Tung << " gia tri tu Input.txt vao cay!" << endl;
 }
 
-// Duyet NLR khong de quy (dung stack mang)
+// Duyet NLR khong de quy (dung stack)
+// Push root; lap: pop - in - push phai roi trai (trai xu ly truoc vi stack LIFO)
 void duyetNLR_KhongDeQuy_1_Tung(Node_1_Tung* p_1_Tung)
 {
 	if (p_1_Tung == NULL)
@@ -85,7 +87,7 @@ void duyetNLR_KhongDeQuy_1_Tung(Node_1_Tung* p_1_Tung)
 	cout << endl;
 }
 
-// Duyet LNR khong de quy
+// Duyet LNR khong de quy: di het trai, pop in nut, sang phai
 void duyetLNR_KhongDeQuy_1_Tung(Node_1_Tung* p_1_Tung)
 {
 	Node_1_Tung* st_1_Tung[MAX_1_Tung];
@@ -105,7 +107,7 @@ void duyetLNR_KhongDeQuy_1_Tung(Node_1_Tung* p_1_Tung)
 	cout << endl;
 }
 
-// Duyet LRN khong de quy (2 stack)
+// Duyet LRN khong de quy: 2 stack (NRL roi dao nguoc = LRN)
 void duyetLRN_KhongDeQuy_1_Tung(Node_1_Tung* p_1_Tung)
 {
 	if (p_1_Tung == NULL)
@@ -134,6 +136,7 @@ void duyetLRN_KhongDeQuy_1_Tung(Node_1_Tung* p_1_Tung)
 
 int laNT_1_Tung(int n_1_Tung)
 {
+	// so nguyen to: > 1 va khong chia het cho so nao tu 2..sqrt(n)
 	if (n_1_Tung < 2)
 		return 0;
 	for (int i_1_Tung = 2; i_1_Tung * i_1_Tung <= n_1_Tung; i_1_Tung++)

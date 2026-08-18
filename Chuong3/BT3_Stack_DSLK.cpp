@@ -1,5 +1,8 @@
 // Ho ten: Nguyen Bui Duy Tung
-// BT3: Quan ly Stack (so nguyen) - cai dat bang DSLK
+// Chuong 3 - BT3: Quan ly Stack (so nguyen) - cai dat bang DSLK
+//
+// Stack LIFO bang DSLK don: top tro toi nut dinh.
+// Push = them dau, Pop = xoa dau. Khong can kiem tra day.
 
 #include <iostream>
 using namespace std;
@@ -8,10 +11,10 @@ using namespace std;
 struct Node_1_Tung
 {
 	int info_1_Tung;
-	Node_1_Tung* link_1_Tung;
+	Node_1_Tung* link_1_Tung; // tro xuong nut phia duoi trong stack
 };
 
-Node_1_Tung* top_1_Tung;
+Node_1_Tung* top_1_Tung; // nut dinh (NULL = rong)
 
 // 2. Khoi tao Stack rong
 void init_1_Tung()
@@ -27,27 +30,28 @@ int isEmpty_1_Tung()
 	return 0;
 }
 
-// 5. Them 1 ptu vao Stack (Push)
+// 5. Them 1 ptu vao Stack (Push) - chen vao dau danh sach
 void Push_1_Tung(int x_1_Tung)
 {
 	Node_1_Tung* p_1_Tung = new Node_1_Tung;
 	p_1_Tung->info_1_Tung = x_1_Tung;
-	p_1_Tung->link_1_Tung = top_1_Tung;
-	top_1_Tung = p_1_Tung;
+	p_1_Tung->link_1_Tung = top_1_Tung; // nut moi tro toi dinh cu
+	top_1_Tung = p_1_Tung;              // top nhay len nut moi
 }
 
-// 6. Lay 1 ptu ra khoi Stack (Pop)
+// 6. Lay 1 ptu ra khoi Stack (Pop) - xoa nut dinh
 int Pop_1_Tung(int& x_1_Tung)
 {
 	if (top_1_Tung == NULL)
 		return 0;
 	Node_1_Tung* p_1_Tung = top_1_Tung;
 	x_1_Tung = p_1_Tung->info_1_Tung;
-	top_1_Tung = top_1_Tung->link_1_Tung;
+	top_1_Tung = top_1_Tung->link_1_Tung; // dinh moi la nut phia duoi
 	delete p_1_Tung;
 	return 1;
 }
 
+// Giai phong toan bo nut
 void xoaHet_1_Tung()
 {
 	int x_1_Tung;
@@ -55,7 +59,7 @@ void xoaHet_1_Tung()
 		;
 }
 
-// 7. Duyet Stack
+// 7. Duyet Stack: di tu top theo link xuong day
 void xuat_1_Tung()
 {
 	if (top_1_Tung == NULL)

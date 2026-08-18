@@ -1,5 +1,7 @@
 // Ho ten: Nguyen Bui Duy Tung
-// B5 - Bai 4: Sap xep Insertion + Selection (va in ket qua nhu mau)
+// Chuong 5 - Bai 4: Insertion Sort + Selection Sort
+// Insertion: chen a[i] vao doan [0..i-1] da co thu tu. O(n^2)
+// Selection: moi vong dua ptu nho nhat ve dau doan chua sx. O(n^2)
 
 #include <iostream>
 using namespace std;
@@ -32,6 +34,7 @@ void output_1_Tung(int a_1_Tung[], int n_1_Tung)
 }
 
 // Cau 1.4 Insertion Sort
+// Ban dau doan [0] da sx. Lan luot chen a[i] vao dung cho trong doan [0..i]
 void Insertion_1_Tung(int a_1_Tung[], int n_1_Tung)
 {
 	for (int i_1_Tung = 1; i_1_Tung < n_1_Tung; i_1_Tung++)
@@ -48,6 +51,7 @@ void Insertion_1_Tung(int a_1_Tung[], int n_1_Tung)
 	}
 }
 
+// Selection Sort: vong k tim min trong [k..n-1] roi doi voi a[k]
 void Selection_1_Tung(int a_1_Tung[], int n_1_Tung)
 {
 	// Di chuyen ranh gioi cua mang da sap xep va chua sx

@@ -1,5 +1,8 @@
 // Ho ten: Nguyen Bui Duy Tung
-// BT3: Quan ly Stack (so nguyen) - cai dat bang mang
+// Chuong 3 - BT3: Quan ly Stack (so nguyen) - cai dat bang mang
+//
+// Stack (LIFO): them/lay deu o dinh (top).
+// Mang a[0..MAX-1], top = chi so ptu dinh. top = -1 => rong.
 
 #include <iostream>
 using namespace std;
@@ -8,7 +11,7 @@ using namespace std;
 
 // 1. Khai bao cau truc Stack
 int a_1_Tung[MAX_1_Tung];
-int top_1_Tung;
+int top_1_Tung; // -1: rong; 0..MAX-1: chi so dinh
 
 // 2. Khoi tao Stack rong
 void init_1_Tung()
@@ -32,7 +35,7 @@ int isFull_1_Tung()
 	return 0;
 }
 
-// 5. Them 1 ptu vao Stack (Push)
+// 5. Them 1 ptu vao Stack (Push) - tang top roi gan
 int Push_1_Tung(int x_1_Tung)
 {
 	if (isFull_1_Tung() == 1)
@@ -41,7 +44,7 @@ int Push_1_Tung(int x_1_Tung)
 	return 1;
 }
 
-// 6. Lay 1 ptu ra khoi Stack (Pop)
+// 6. Lay 1 ptu ra khoi Stack (Pop) - lay a[top] roi giam top
 int Pop_1_Tung(int& x_1_Tung)
 {
 	if (isEmpty_1_Tung() == 1)
@@ -50,7 +53,7 @@ int Pop_1_Tung(int& x_1_Tung)
 	return 1;
 }
 
-// 7. Duyet Stack (hien thi cac ptu)
+// 7. Duyet Stack (hien thi tu dinh xuong day)
 void xuat_1_Tung()
 {
 	if (isEmpty_1_Tung() == 1)

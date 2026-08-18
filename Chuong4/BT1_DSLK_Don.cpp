@@ -1,5 +1,6 @@
 // Ho ten: Nguyen Bui Duy Tung
-// BT1: Quan ly phan tu bang DSLK don (so nguyen duong)
+// Chuong 4 - BT1: Quan ly phan tu bang DSLK don (so nguyen duong)
+// Them dau/cuoi, xuat, sap xep tang/giam (doi cho info).
 
 #include <iostream>
 using namespace std;
@@ -36,6 +37,7 @@ void xuat_1_Tung()
 }
 
 // Them phan tu vao dau
+// Them phan tu vao dau (O(1)): nut moi tro toi first cu
 void themDau_1_Tung(int x_1_Tung)
 {
 	Node_1_Tung* p_1_Tung = new Node_1_Tung;
@@ -45,6 +47,7 @@ void themDau_1_Tung(int x_1_Tung)
 }
 
 // Them phan tu vao cuoi
+// Them phan tu vao cuoi: duyet den nut last roi noi
 void themCuoi_1_Tung(int x_1_Tung)
 {
 	Node_1_Tung* p_1_Tung = new Node_1_Tung;
@@ -84,6 +87,7 @@ void hoanVi_1_Tung(int& a_1_Tung, int& b_1_Tung)
 }
 
 // Sap xep tang dan (doi cho info)
+// Sap xep tang dan (doi cho info, giong interchange)
 void sapTang_1_Tung()
 {
 	for (Node_1_Tung* p_1_Tung = first_1_Tung; p_1_Tung != NULL; p_1_Tung = p_1_Tung->link_1_Tung)
