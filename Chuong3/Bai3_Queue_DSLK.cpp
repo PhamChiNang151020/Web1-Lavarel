@@ -1,9 +1,9 @@
 // Ho ten: Nguyen Bui Duy Tung
 // Chuong 3 - Bai 3: Queue dung DSLK
 //
-// Queue FIFO cai bang danh sach lien ket don.
+// Queue dung danh sach lien ket don.
 // front: nut dau (lay ra), rear: nut cuoi (them vao).
-// Khong bi day vi cap phat dong; ket thuc phai xoa het de tranh ro ri bo nho.
+// Ket thuc chuong trinh thi xoa het hang doi.
 
 #include <iostream>
 using namespace std;

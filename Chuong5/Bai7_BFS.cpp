@@ -203,7 +203,7 @@ int Spop_1_Tung(int& x_1_Tung)
 	return 1;
 }
 
-// BFS: hang doi, danh dau chuaxet=0 khi dua vao queue (tranh visit 2 lan)
+// BFS: dung hang doi, danh dau da xet de khong duyet lai
 void BFS_1_Tung(int start_1_Tung)
 {
 	int vt_1_Tung = timViTri_1_Tung(start_1_Tung);
@@ -289,7 +289,7 @@ void DFS_1_Tung(int start_1_Tung)
 	cout << endl;
 }
 
-// Kiem tra dinh X co tren do thi khong (dua tren BFS)
+// Kiem tra dinh X co tren do thi khong (duyet BFS)
 int timBFS_1_Tung(int x_1_Tung)
 {
 	if (n_1_Tung == 0)

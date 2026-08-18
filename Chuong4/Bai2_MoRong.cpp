@@ -145,7 +145,7 @@ int tong_1_Tung(Node_1_Tung* p_1_Tung)
 	return p_1_Tung->info_1_Tung + tong_1_Tung(p_1_Tung->left_1_Tung) + tong_1_Tung(p_1_Tung->right_1_Tung);
 }
 
-// Xuat cac ptu nho hon 6 (theo man hinh mau bai 2)
+// Xuat cac ptu nho hon 6
 void xuatNhoHon_1_Tung(Node_1_Tung* p_1_Tung, int x_1_Tung)
 {
 	if (p_1_Tung == NULL)

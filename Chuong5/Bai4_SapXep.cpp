@@ -1,7 +1,7 @@
 // Ho ten: Nguyen Bui Duy Tung
 // Chuong 5 - Bai 4: Insertion Sort + Selection Sort
-// Insertion: chen a[i] vao doan [0..i-1] da co thu tu. O(n^2)
-// Selection: moi vong dua ptu nho nhat ve dau doan chua sx. O(n^2)
+// Insertion: chen a[i] vao doan [0..i-1] da co thu tu.
+// Selection: moi vong dua ptu nho nhat ve dau doan chua sx.
 
 #include <iostream>
 using namespace std;

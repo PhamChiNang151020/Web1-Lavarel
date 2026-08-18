@@ -63,7 +63,7 @@ Node_1_Tung* Tim_1_Tung(Node_1_Tung* p_1_Tung, int x_1_Tung)
 	return NULL;
 }
 
-// 5. Duyet cay LNR dung de quy (Left-Node-Right) -> in tang dan tren BST
+// 5. Duyet cay LNR dung de quy (trai - nut - phai)
 void duyetLNR_1_Tung(Node_1_Tung* p_1_Tung)
 {
 	if (p_1_Tung != NULL)
@@ -74,7 +74,7 @@ void duyetLNR_1_Tung(Node_1_Tung* p_1_Tung)
 	}
 }
 
-// 6. Duyet cay LRN dung de quy (Left-Right-Node) - hau tu
+// 6. Duyet cay LRN dung de quy (trai - phai - nut)
 void duyetLRN_1_Tung(Node_1_Tung* p_1_Tung)
 {
 	if (p_1_Tung != NULL)
@@ -85,7 +85,7 @@ void duyetLRN_1_Tung(Node_1_Tung* p_1_Tung)
 	}
 }
 
-// 7. Duyet cay NLR dung de quy (Node-Left-Right) - tien tu
+// 7. Duyet cay NLR dung de quy (nut - trai - phai)
 void duyetNLR_1_Tung(Node_1_Tung* p_1_Tung)
 {
 	if (p_1_Tung != NULL)
@@ -116,7 +116,7 @@ Node_1_Tung* TimMin_1_Tung(Node_1_Tung* p_1_Tung)
 	return p_1_Tung;
 }
 
-// 10. Xoa 1 nut trong cay (3 truong hop - theo slide)
+// 10. Xoa 1 nut trong cay (3 truong hop)
 void Xoa_1_Tung(Node_1_Tung*& p_1_Tung, int x_1_Tung)
 {
 	if (p_1_Tung == NULL)
@@ -147,7 +147,7 @@ void Xoa_1_Tung(Node_1_Tung*& p_1_Tung, int x_1_Tung)
 			delete t_1_Tung;
 		}
 		// Truong hop 3: nut bac 2
-		// The bang nut cuc trai cua nhanh con phai (in-order successor)
+		// The bang nut cuc trai cua nhanh con phai
 		else
 		{
 			Node_1_Tung* t_1_Tung = p_1_Tung->right_1_Tung;
@@ -159,7 +159,7 @@ void Xoa_1_Tung(Node_1_Tung*& p_1_Tung, int x_1_Tung)
 	}
 }
 
-// Xuat cay xoay 90 do: in nhanh phai truoc, indent theo muc (nhin ngang)
+// Xuat cay xoay 90 do, in nhanh phai truoc
 void print2DUtil_1_Tung(Node_1_Tung* p_1_Tung, int space_1_Tung)
 {
 	if (p_1_Tung == NULL)

@@ -1,7 +1,7 @@
 // Ho ten: Nguyen Bui Duy Tung
 // Chuong 5 - Bai 8: DFS (ma tran ke + Queue/Stack danh sach dac)
 // BFS: Queue mang. DFS: Stack mang.
-// Tim dinh X dua tren phep duyet DFS.
+// Tim dinh X bang DFS.
 
 #include <iostream>
 using namespace std;
@@ -148,7 +148,7 @@ void BFS_1_Tung(int start_1_Tung)
 	cout << endl;
 }
 
-// DFS tren ma tran ke, Stack mang; push cac dinh ke tu phai sang de duyet trai truoc
+// DFS dung stack mang
 void DFS_1_Tung(int start_1_Tung)
 {
 	if (start_1_Tung < 0 || start_1_Tung >= n_1_Tung)
@@ -178,7 +178,7 @@ void DFS_1_Tung(int start_1_Tung)
 	cout << endl;
 }
 
-// Kiem tra dinh X co ton tai khong (dua tren DFS)
+// Kiem tra dinh X co ton tai khong (duyet DFS)
 int timDFS_1_Tung(int x_1_Tung)
 {
 	if (n_1_Tung == 0)

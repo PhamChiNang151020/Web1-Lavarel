@@ -1,7 +1,7 @@
 // Ho ten: Nguyen Bui Duy Tung
 // Chuong 3 - BT3: Quan ly Stack (so nguyen) - cai dat bang DSLK
 //
-// Stack LIFO bang DSLK don: top tro toi nut dinh.
+// Stack dung DSLK don, top tro toi nut dinh.
 // Push = them dau, Pop = xoa dau. Khong can kiem tra day.
 
 #include <iostream>

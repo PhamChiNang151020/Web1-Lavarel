@@ -1,7 +1,7 @@
 // Ho ten: Nguyen Bui Duy Tung
 // Chuong 5 - Bai 6: Bieu dien do thi - ma tran ke + danh sach ke
 // Ma tran ke A[i][j] = 1 neu co canh i-j.
-// Danh sach ke: first[i] la DSLK cac dinh ke (insert_first theo slide).
+// Danh sach ke: first[i] la DSLK cac dinh ke cua dinh i.
 
 #include <iostream>
 using namespace std;
@@ -71,7 +71,7 @@ void outputMT_Ten_1_Tung()
 	}
 }
 
-// Do thi mau 6 dinh A-F trong slide
+// Do thi mau 6 dinh A-F
 void napMauMT_1_Tung()
 {
 	nMT_1_Tung = 6;

@@ -2,8 +2,7 @@
 // Chuong 3 - Bai 2: Queue mang - phuong phap VONG
 //
 // Queue vong: khi rear (hoac front) den cuoi mang thi quay ve 0.
-// Khong can don phan tu nhu tinh tien, them/xoa van O(1).
-// Day khi: (rear - front == MAX-1) hoac (rear - front == -1) (theo slide).
+// Khong can don phan tu nhu tinh tien.
 
 #include <iostream>
 using namespace std;

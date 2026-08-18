@@ -1,7 +1,7 @@
 // Ho ten: Nguyen Bui Duy Tung
 // Chuong 3 - Bai 1: Queue mang - phuong phap TINH TIEN
 //
-// Queue (FIFO): them o rear, lay o front.
+// Queue: them o rear, lay o front.
 // Dung mang 100 ptu. Khi rear den cuoi mang nhung van con cho o dau
 // (front > 0) thi "tinh tien" (doi ptu ve index 0) de khong bi tran gia.
 

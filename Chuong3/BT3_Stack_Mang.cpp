@@ -1,7 +1,7 @@
 // Ho ten: Nguyen Bui Duy Tung
 // Chuong 3 - BT3: Quan ly Stack (so nguyen) - cai dat bang mang
 //
-// Stack (LIFO): them/lay deu o dinh (top).
+// Stack: them/lay deu o dinh (top).
 // Mang a[0..MAX-1], top = chi so ptu dinh. top = -1 => rong.
 
 #include <iostream>
